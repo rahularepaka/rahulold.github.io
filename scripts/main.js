@@ -21,6 +21,8 @@ app.addEventListener("click", function(event){
 
 
 async function open_terminal(){
+  createText("Hi there, I'm Rahul Arepaka 👋");
+  await delay(400);
   createText("Welcome");
   await delay(700);
   createText("Starting the server...");
@@ -44,7 +46,7 @@ function new_line(){
   p.setAttribute("class", "path")
   p.textContent = "# user";
   span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  span2.textContent = " ~/rahularepaka";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -71,39 +73,78 @@ async function getInputValue(){
   if(value === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects. Follow me there ;)");
-    createCode("about me", "Who am i and what do i do.");
-    createCode("social -a", "All my social networks.");
-    createCode("clear", "Clean the terminal.");
+    createCode("projects", "My github page with my projects 🚧)");
+    createCode("about me", "Who am i and what do i do 🤠");
+    createCode("tools", "Things I do and currently learning 🤔")
+    createCode("awards", "Awards and Organizations which I was part of 🌎")
+    createCode("resume", "Résumé 📝")
+    createCode("social -a", "All my social networks 📱");
+    createCode("contact", "If you have a question or simply want to say hello 😀")
+    createCode("clear", "Clean the terminal 🧹");
     
   }
   else if(value === "projects"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
+    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
+  }
+  else if(value === "resume"){
+    trueValue(value);
+    createText("<a href='https://drive.google.com/file/d/1ftTH0jLV3gu6NP3Ff6bEIuJNZ0SkJDMW/view?usp=sharing' target='_blank'></i> Here, is my Résumé 📝 </a>")
+  }
+  else if(value === "contact"){
+    trueValue(value);
+    createText("<a href='mailto:rahul.arepaka@gmail.com' target='_blank'></i> 📧 Email ID : rahul.arepaka@gmail.com  </a>")
+  }
+  else if(value === "awards"){
+    trueValue(value);
+    createText("🤖 14th Place at World Robotics Olympiad 2018 as Team UAE")
+    createText("🔨 Think Award at FIRST Tech Challenge 2019")
+    createText("👷 Judge at FIRST Lego League Judge 2020")
+    createText("🔬  1st at Mahindra University Research Symposium 2020")
+    createText("🕴️ 1st at Technobizad Business Challenge")
+    createText("✨ 1st at University of Wollongong – Robotics Annual Competition")
+    createText("🥇 1st at the National Robotics Olympiad UAE")
+    createText("🌎 Organizations : " )
+    createText("- World Robot Olympiad |Babson Build Challenge| MU Hult Prize")
+    createText("- FIRST Tech Challenge|Hackobterfest|TEDx")
+  }
+  else if(value === "tools"){
+    trueValue(value);
+    createText("⚡ Arduino | NodeMCU | Raspberry Pi | Nvidia Jetson Nano | IoT")
+    createText("🧰 Visual Studio Code | OpenCV | Fusion 360")
+    createText("🖥️ C | C++ | Python")
   }
   else if(value === "about me"){
     trueValue(value);
-    createText("Oi, meu nome é Héber ;)")
-    createText("Desenvolvedor atualmente focado em todo o ecossistema Javascript. Utilizando principalmente a stack <span class='blue'>Node, React e React Native </span>por permitir criar aplicações de forma descomplicada e produtiva.")
+    createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
+    createText("🤖 I'm a Robotics Enthusiast and Developer 🤖")
+    createText("🏫 19 | Our Own High School Al Warqa'a '20 🇦🇪 | Mahindra University '24 🇮🇳")
+    createText("🖥️ Currently pursing Computer Science and Engineering at Mahindra University'24")
+    createText("👷 Currently working on Laser Killing Weeds on FarmBot")
+    createText("🚗 Currently Working on Dashboard on Renault Twizy : Self Driving Car")
+    createText("🚁 Protyping on Co-Axial Drones using Graphite Solid State batteries")
+    createText("❤️ Interests: Robotics |Reverse Engineering | Product Engineering")
+
   }
   else if(value === "social -a"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-    createText("<a href='https://www.linkedin.com/in/heber-leonard/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/heber-leonard</a>")
-    createText("<a href='https://www.instagram.com/heber_leonard/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/heber_leonard</a>")
+    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
+    createText("<a href='https://www.linkedin.com/in/rahul-arepaka/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/rahul-arepaka</a>")
+    createText("<a href='https://www.instagram.com/rahul.arepaka/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/rahul.arepaka</a>")
   }
   else if(value === "social"){
     trueValue(value);
-    createText("Didn't you mean: social -a?")
+    createText("Didn't you mean: social -a? 😊")
   }
   
   else if(value === "clear"){
-    document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
-    document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+    window.location.reload(true); 
+    //document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
+    //document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
   }
   else{
     falseValue(value);
-    createText(`command not found: ${value}`)
+    createText(`🙅‍♂️ command not found 🙅‍♂️ : ${value}`)
   }
 }
 
