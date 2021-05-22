@@ -23,15 +23,15 @@ app.addEventListener("click", function(event){
 async function open_terminal(){
   createText("Hi there, I'm Rahul Arepaka 👋");
   await delay(400);
-  createText("Welcome");
+  createText("Welcome 👋");
   await delay(700);
-  createText("Starting the server...");
+  createText("Starting the server 🔓");
   await delay(1500);
-  createText("You can run several commands:");
+  createText("You can run several commands 👨‍💻");
  
-  createCode("about me", "Who am i and what do i do.");
-  createCode("all", "See all commands.");
-  createCode("social -a", "All my social networks.");
+  createCode("about me", "Who am i and what do i do 😀");
+  createCode("all", "See all commands 📂");
+  createCode("social -a", "All my social networks 📱");
 
   await delay(500);
   new_line();
@@ -116,7 +116,7 @@ async function getInputValue(){
   }
   else if(value === "about me"){
     trueValue(value);
-    createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
+    //createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
     createText("🤖 I'm a Robotics Enthusiast and Developer 🤖")
     createText("🏫 19 | Our Own High School Al Warqa'a '20 🇦🇪 | Mahindra University '24 🇮🇳")
     createText("🖥️ Currently pursing Computer Science and Engineering at Mahindra University'24")
