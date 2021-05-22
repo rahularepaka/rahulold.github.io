@@ -19,26 +19,62 @@ app.addEventListener("click", function(event){
 })
 
 
+var speed = 30 ;
+
+async function createNewText(text){
+  var p = document.createElement("p");
+  p.id = "Initial"; 
+  for(i in text) {
+    p.innerHTML += text[i];
+    app.appendChild(p);
+    await delay (speed);
+  }
+}
+
+
+async function blinkingCursor()
+{
+  const blink = document.createElement("span");
+  blink.id = "cursor";
+  app.appendChild(blink);
+  await delay(1200);
+  blink.parentNode.removeChild(blink);
+}
+
 async function open_terminal(){
-  createText("Welcome, I'm Rahul Arepaka 👋");
-  await delay(400);
-  createText("MIT License : Copyright (c) 2021 Rahul Arepaka");
-  await delay(700);
-  createText("Starting the server 🔓");
-  await delay(1500);
-  createText("You can run several commands 👨‍💻");
- 
+
+  blinkingCursor();
+  await delay(1200);
+
+  var text = "";
+
+  text = "Welcome, I'm Rahul Arepaka 👋";
+  createNewText(text);
+  await delay(text.length*speed + 50);
+
+  text = "MIT License : Copyright (c) 2021 Rahul Arepaka";
+  createNewText(text);
+  await delay(text.length*speed + 50);
+
+  text = "Starting the server 🔓";
+  createNewText(text);
+  await delay(text.length*speed + 50);
+
+  text = "You can run several commands 👨‍💻";
+  createNewText(text);
+  await delay(text.length*speed + 50);
+
+  await delay(500);
   createCode("about me", "Who am i and what do i do 😀");
   createCode("all", "See all commands 📂");
   createCode("social", "All my social networks 📱");
 
-  await delay(500);
+  await delay(100);
   new_line();
 }
 
 
 function new_line(){
-  
   const p = document.createElement("p");
   const span1 = document.createElement("span");
   const span2 = document.createElement("span");
@@ -67,7 +103,6 @@ function removeInput(){
 }
 
 async function getInputValue(){
-  
   const value = document.querySelector("input").value;
   if(value === "all"){
     trueValue(value);
