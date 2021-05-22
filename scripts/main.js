@@ -30,7 +30,7 @@ async function open_terminal(){
  
   createCode("about me", "Who am i and what do i do 😀");
   createCode("all", "See all commands 📂");
-  createCode("social -a", "All my social networks 📱");
+  createCode("social", "All my social networks 📱");
 
   await delay(500);
   new_line();
@@ -77,7 +77,7 @@ async function getInputValue(){
     createCode("tools", "Things I do and currently learning 🤔")
     createCode("awards", "Awards and Organizations which I was part of 🌎")
     createCode("resume", "Résumé 📝")
-    createCode("social -a", "All my social networks 📱");
+    createCode("social", "All my social networks 📱");
     createCode("contact", "If you have a question or simply want to say hello 😀")
     createCode("clear", "Clean the terminal 🧹");
     
@@ -125,15 +125,11 @@ async function getInputValue(){
     createText("❤️ Interests: Robotics |Reverse Engineering | Product Engineering")
 
   }
-  else if(value === "social -a"){
+  else if(value === "social"){
     trueValue(value);
     createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
     createText("<a href='https://www.linkedin.com/in/rahul-arepaka/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/rahul-arepaka</a>")
     createText("<a href='https://www.instagram.com/rahul.arepaka/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/rahul.arepaka</a>")
-  }
-  else if(value === "social"){
-    trueValue(value);
-    createText("Didn't you mean: social -a? 😊")
   }
   
   else if(value === "clear"){
