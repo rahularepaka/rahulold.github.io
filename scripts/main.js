@@ -20,9 +20,9 @@ app.addEventListener("click", function(event){
 
 
 async function open_terminal(){
-  createText("Hi there, I'm Rahul Arepaka 👋");
+  createText("Welcome, I'm Rahul Arepaka 👋");
   await delay(400);
-  createText("Welcome 👋");
+  createText("MIT License : Copyright (c) 2021 Rahul Arepaka");
   await delay(700);
   createText("Starting the server 🔓");
   await delay(1500);
