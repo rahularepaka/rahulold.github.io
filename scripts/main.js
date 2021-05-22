@@ -129,7 +129,7 @@ async function getInputValue(){
     trueValue(value);
     createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
     createText("<a href='https://www.linkedin.com/in/rahul-arepaka/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/rahul-arepaka</a>")
-    createText("<a href='https://www.instagram.com/rahul.arepaka/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/rahul.arepaka</a>")
+    createText("<a href='https://www.instagram.com/rahularepaka/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/rahularepaka</a>")
   }
   
   else if(value === "clear"){
