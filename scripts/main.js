@@ -107,19 +107,26 @@ async function getInputValue(){
   if(value === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects 🚧)");
+    createCode("projects", "My github page with my projects 🚧");
     createCode("about me", "Who am i and what do i do 🤠");
     createCode("tools", "Things I do and currently learning 🤔")
     createCode("awards", "Awards and Organizations which I was part of 🌎")
     createCode("resume", "Résumé 📝")
     createCode("social", "All my social networks 📱");
     createCode("contact", "If you have a question or simply want to say hello 😀")
+    createCode("credits", "Special Mentions 🎈")
     createCode("clear", "Clean the terminal 🧹");
     
   }
   else if(value === "projects"){
     trueValue(value);
-    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
+    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka </a>")
+  }
+  else if(value === "credits"){
+    trueValue(value);
+    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> 😊 I made the website from a forked Repo </a>")
+    createText("<a href='https://github.com/Rounak-Das-02' target='_blank'><i class='fab fa-github white'></i> 💙 Rounak Das : Thanks for the Typing Effect </a>")
+    createText("<a href='https://github.com/rahularepaka/rahularepaka.github.io/blob/master/LICENSE' target='_blank'><i class='fab fa-github white'></i> MIT License : Copyright (c) 2021 Rahul Arepaka </a>")
   }
   else if(value === "resume"){
     trueValue(value);
