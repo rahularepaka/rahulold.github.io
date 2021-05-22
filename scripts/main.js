@@ -137,7 +137,6 @@ async function getInputValue(){
   }
   
   else if(value === "clear"){
-    //window.location.reload(true); 
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
   }
