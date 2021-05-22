@@ -116,7 +116,7 @@ async function getInputValue(){
   }
   else if(value === "about me"){
     trueValue(value);
-    createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
+    //createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
     createText("🤖 I'm a Robotics Enthusiast and Developer 🤖")
     createText("🏫 19 | Our Own High School Al Warqa'a '20 🇦🇪 | Mahindra University '24 🇮🇳")
     createText("🖥️ Currently pursing Computer Science and Engineering at Mahindra University'24")
