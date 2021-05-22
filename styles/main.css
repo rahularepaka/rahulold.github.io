@@ -157,14 +157,16 @@ input{
   width:100%;
   font-size:18px;
   font-family: 'Fira Code', monospace;
+  caret-color: white;
 }
+
 input:focus{
-  border:none;
+  border: white;
   outline: none;
   box-shadow: none;
   background-color: unset;
-  
 }
+
 .type{
   display:flex;
   align-items: center;
@@ -182,4 +184,20 @@ input:focus{
 
 .icone.error{
   color:#F78F85;
+}
+
+#cursor {
+  background: white;
+  line-height: 20px;
+  margin-top : 10px;
+  margin-left: 3px;
+  animation: blink 0.5s infinite;
+  width: 7px;
+  height: 18px;
+}
+
+@keyframes blink {
+  0% {background: #424040}
+  50% {background: white}
+  100% {background: #424040}
 }
