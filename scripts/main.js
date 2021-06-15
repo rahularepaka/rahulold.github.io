@@ -130,7 +130,7 @@ async function getInputValue(){
   }
   else if(value === "resume"){
     trueValue(value);
-    createText("<a href='https://drive.google.com/file/d/1AxB4HgBp5m4ro0ZQQF2_4kW1z9ADAZOO/view?usp=sharing' target='_blank'></i> Here, is my Résumé 📝 </a>")
+    createText("<a href='https://drive.google.com/file/d/1EcBxrVSWqRVwsi9I1mdeFuECedEFKIYX/view?usp=sharing' target='_blank'></i> Here, is my Résumé 📝 </a>")
   }
   else if(value === "contact"){
     trueValue(value);
