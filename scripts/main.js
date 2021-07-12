@@ -18,8 +18,8 @@ app.addEventListener("click", function(event){
   input.focus();
 })
 
-
 var speed = 30 ;
+path_for_Image = "images/";
 
 async function createNewText(text){
   var p = document.createElement("p");
@@ -71,7 +71,10 @@ async function open_terminal(){
 
   await delay(100);
   new_line();
+
+
 }
+
 
 
 function new_line(){
@@ -121,6 +124,17 @@ async function getInputValue(){
   else if(value === "projects"){
     trueValue(value);
     createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka </a>")
+
+    /* Put the paths and the text you want to render in the following function
+       The syntax should be :
+       createImage(fileName, Text that you want to render)
+       NOTE: All the images to be uploaded inside images folder
+       Here's an example for you*/
+       text_that_you_want_to_render = "HEY, I'LL BE RENDERED";
+       fileName = "Screenshot_1626072771.png"
+       createImage(fileName, text_that_you_want_to_render);
+
+    // Call createImage from anywhere you want.
   }
   else if(value === "credits"){
     trueValue(value);
@@ -177,6 +191,7 @@ async function getInputValue(){
   else if(value === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+    document.querySelectorAll("img").forEach(e => e.parentNode.removeChild(e));
   }
   else{
     falseValue(value);
@@ -215,18 +230,30 @@ function falseValue(value){
 function createText(text, classname){
   const p = document.createElement("p");
   
-  p.innerHTML =
-  text
-  ;
+  p.innerHTML = text;
   app.appendChild(p);
 }
 
 function createCode(code, text){
   const p = document.createElement("p");
   p.setAttribute("class", "code");
-  p.innerHTML =
- `${code} <br/><span class='text'> ${text} </span>`;
+  p.innerHTML =`${code} <br/><span class='text'> ${text} </span>`;
   app.appendChild(p);
+}
+
+function createImage(fileName, text){
+  const container = document.createElement("span");
+  container.setAttribute("class", "imageContainer");
+  const img = document.createElement("img");
+  img.setAttribute("class", "image");
+  img.setAttribute("id", "image");
+  img.setAttribute("src", (path_for_Image+fileName));
+  container.appendChild(img);
+  const p = document.createElement("p");
+  p.setAttribute("class", "image_description");
+  p.innerHTML = text;
+  container.appendChild(p);
+  app.appendChild(container)
 }
 
 open_terminal();
