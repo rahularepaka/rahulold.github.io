@@ -11,15 +11,21 @@
 }
 
 .image{
-  width : 20vw;
+  width : 15vw;
   padding : 20px;
-  float : left;
+  position: relative;
+  float: left;
+  height:18vw;
 }
+
 
 .image_description{
   padding-top: 25px;
   text-align: left;
+  font-size: 1em;
   margin : auto;
+  line-height: 200%;
+
 }
 
 /* ####################################### Till Here ################################################### */

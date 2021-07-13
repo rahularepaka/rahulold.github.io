@@ -52,9 +52,11 @@ async function open_terminal(){
   createNewText(text);
   await delay(text.length*speed + 50);
 
+  /*
   text = "MIT License : Copyright (c) 2021 Rahul Arepaka";
   createNewText(text);
   await delay(text.length*speed + 50);
+  */
 
   text = "Starting the server 🔓";
   createNewText(text);
@@ -110,32 +112,39 @@ async function getInputValue(){
   if(value === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects 🚧");
     createCode("about me", "Who am i and what do i do 🤠");
-    createCode("tools", "Things I do and currently learning 🤔")
+    createCode("projects", "My github page with my projects 🚧");
+    createCode("skills", "Things I do and currently learning 🤔")
+    createCode("education", "My Second Home 🏫")
     createCode("awards", "Awards and Organizations which I was part of 🌎")
     createCode("resume", "Résumé 📝")
     createCode("social", "All my social networks 📱");
     createCode("contact", "If you have a question or simply want to say hello 😀")
-    createCode("credits", "Special Mentions 🎈")
+    createCode("license", "Some Legal Stuff ⚖️")
     createCode("clear", "Clean the terminal 🧹");
     
   }
   else if(value === "projects"){
     trueValue(value);
-    createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka </a>")
-
-    /* Put the paths and the text you want to render in the following function
-       The syntax should be :
-       createImage(fileName, Text that you want to render)
-       NOTE: All the images to be uploaded inside images folder
-       Here's an example for you*/
-       text_that_you_want_to_render = "HEY, I'LL BE RENDERED";
-       fileName = "Screenshot_1626072771.png"
-       createImage(fileName, text_that_you_want_to_render);
-
-    // Call createImage from anywhere you want.
+    createText("<a href='https://github.com/rahularepaka/Project-Cyclops' target='_blank'><i class='fab fa-github white'></i> Project-Cyclops : Laser Tool for Killing Weeds ☘️ </a>")
+      text_that_you_want_to_render = "This is all-new laser killing weed removal for the Farmbot designed by our team. This tool is designed to destroy weeds using Thermal Technique : Laser by detecting weeds using Camera and weed detection.The Camera will detect for weeds and give those coordiantes to the farmbot and give add/subtract the off-set of the laser mount location and turn on the laser for 500ms and spray water on the location to complete the sequence.The Laser module was tested and designed for the farmbot genesis v1.3 and this attachement is expected out to all the farmbot kits in the 2023.Find the documentation in the github Repo which contains the reports, parts details and test videos.";
+       fileName = "laser.jpg"
+       createImage(fileName,text_that_you_want_to_render);
+    
+    createText("<a href='https://github.com/rahularepaka/Project-Clara' target='_blank'><i class='fab fa-github white'></i> Project-Clara : Cable Lifted Automated Robot for Agriculture 🚜 </a>")
+      text_that_you_want_to_render_1 = "Theory : A leading cause of Soil compaction is the use of heavy land-based agricultural machinery which leads to loss of air content within the soil Due to this heavy farm equipment including tractors can exert considerable weight onto the soil surface and consequently into the subsoil. Solution : We decided to do Cable Driven Parallel Robot (CDPR) which can carry out different agriculture processes and can work in indoor and outdoor environments So we made CLARA (Cable Lifted Automated Robot for Agriculture) is CDPR and her motion is dependent on 8 Motors from which she is suspended using strings. Find the documentation in the github Repo which contains the reports, parts details and test videos.";
+       fileName1 = "clara.jpg"
+       createImage(fileName1,text_that_you_want_to_render_1);
   }
+
+  else if(value === "education"){
+    trueValue(value);
+    createText("École Centrale School of Engineering, Mahindra University | Bachelor of Technology in Computer Science and Engineering");
+    createText("Oct 2020 – Exp. June 2024")
+    createText("Our Own High School Al Warqa’a, GEMS Education | Science Stream with Computer Science, CBSE");
+    createText("April 2010 – March 2020");
+  }
+
   else if(value === "credits"){
     trueValue(value);
     createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> 😊 I made the website from a forked Repo </a>")
@@ -152,9 +161,10 @@ async function getInputValue(){
   }
   else if(value === "awards"){
     trueValue(value);
+    createText("🏗️ Finalist for Global Babson Collaborative challenge – Bachelor’s level (Top 10 Teams)")
     createText("🤖 14th Place at World Robotics Olympiad 2018 as Team UAE")
     createText("🔨 Think Award at FIRST Tech Challenge 2019")
-    createText("👷 Judge at FIRST Lego League Judge 2020")
+    createText("👷 Judge at FIRST Lego League Judge 2020 | 2021")
     createText("🔬  1st at Mahindra University Research Symposium 2020")
     createText("🕴️ 1st at Technobizad Business Challenge")
     createText("✨ 1st at University of Wollongong – Robotics Annual Competition")
@@ -163,22 +173,20 @@ async function getInputValue(){
     createText("- World Robot Olympiad |Babson Build Challenge| MU Hult Prize")
     createText("- FIRST Tech Challenge|Hackobterfest|TEDx")
   }
-  else if(value === "tools"){
+  else if(value === "skills"){
     trueValue(value);
-    createText("⚡ Arduino | NodeMCU | Raspberry Pi | Nvidia Jetson Nano | IoT")
-    createText("🧰 Visual Studio Code | OpenCV | Fusion 360")
-    createText("🖥️ C | C++ | Python")
+    createText("🧑‍💻 Programming Languages: C, C++, Python")
+    createText("💻 Operating Systems: Linux, Windows, WSL.")
+    createText("⚙️ Technical Tools: Arduino, Raspberry Pi, OpenCV, Autodesk Fusion 360, Git, VS Code, Image Processing, IoT, NodeMCU.")
+    createText("💗 Interests: Robotics, Reverse Engineering, Product Engineering, Rapid Prototyping, Hardware Hacking, Product Innovation.")
+
   }
   else if(value === "about me"){
     trueValue(value);
-    //createText("👋 Hi there, I'm Rahul Arepaka 👋;)")
-    createText("🤖 I'm a Robotics Enthusiast and Developer 🤖")
-    createText("🏫 19 | Our Own High School Al Warqa'a '20 🇦🇪 | Mahindra University '24 🇮🇳")
-    createText("🖥️ Currently pursing Computer Science and Engineering at Mahindra University'24")
-    createText("👷 Currently working on Laser Killing Weeds on FarmBot")
-    createText("🚗 Currently Working on Dashboard on Renault Twizy : Self Driving Car")
-    createText("🚁 Protyping on Co-Axial Drones using Graphite Solid State batteries")
-    createText("❤️ Interests: Robotics |Reverse Engineering | Product Engineering")
+    createText(">> Here is a sweet Into of Myself 🥰 ")
+      text_that_you_want_to_render_M = "Hi there, I'm Rahul Arepaka 👋, 19 years old and currently studying at Mahindra University '24 🇮🇳 in computer science and engineering 🏫 . I'm a Robotics Enthusiast 🤖 and love to contribute towards research in agriculture field 🧑‍🌾 . I am currently working on killing weeds using lasers 🔥 and researching on the co-axial drones using solid state batteries 🔋 .My interest are Reverse Engineering ⛏️ and Product Engineering ✂️ . Love to connect and meet new people and open to collobration research projects 😍 "
+       fileNameM = "rahul.jpeg"
+       createImage(fileNameM,text_that_you_want_to_render_M);
 
   }
   else if(value === "social"){
@@ -186,6 +194,11 @@ async function getInputValue(){
     createText("<a href='https://github.com/rahularepaka' target='_blank'><i class='fab fa-github white'></i> github.com/rahularepaka</a>")
     createText("<a href='https://www.linkedin.com/in/rahul-arepaka/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/rahul-arepaka</a>")
     createText("<a href='https://www.instagram.com/rahularepaka/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/rahularepaka</a>")
+  }
+
+  else if(value == "license"){
+    trueValue(value);
+        createText("<a href='https://github.com/rahularepaka/rahularepaka.github.io/blob/master/LICENSE' target='_blank'><i class='fab fa-github white'></i> MIT License : Copyright (c) 2021 Rahul Arepaka</a>")
   }
   
   else if(value === "clear"){
@@ -195,7 +208,7 @@ async function getInputValue(){
   }
   else{
     falseValue(value);
-    createText(`🙅‍♂️ command not found 🙅‍♂️ : ${value}`)
+    createText(`command not found ⛔ ${value}`)
   }
 }
 
@@ -255,5 +268,6 @@ function createImage(fileName, text){
   container.appendChild(p);
   app.appendChild(container)
 }
+
 
 open_terminal();
