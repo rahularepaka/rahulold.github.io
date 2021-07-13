@@ -2,6 +2,28 @@
  * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+
+ /* ################ To change how images appear on the terminal, change the following : ################### */
+.imageContainer{
+  /* display: inline-block; */
+  /* background-color: teal; */
+  width : 60vw;
+}
+
+.image{
+  width : 20vw;
+  padding : 20px;
+  float : left;
+}
+
+.image_description{
+  padding-top: 25px;
+  text-align: left;
+  margin : auto;
+}
+
+/* ####################################### Till Here ################################################### */
+
 .fa,
 .fas,
 .far,
